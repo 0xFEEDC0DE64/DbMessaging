@@ -7,9 +7,13 @@ TARGET = messagingserver
 
 PROJECT_ROOT = ../..
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    client.cpp \
+    server.cpp
 
-HEADERS +=
+HEADERS += \
+    client.h \
+    server.h
 
 FORMS +=
 

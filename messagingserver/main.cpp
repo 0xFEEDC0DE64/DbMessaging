@@ -1,11 +1,12 @@
 #include <QCoreApplication>
-#include <QDebug>
+
+#include "server.h"
 
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
 
-    qDebug() << "hello from server";
+    Server server;
 
-    return 0;
+    return app.exec();
 }
