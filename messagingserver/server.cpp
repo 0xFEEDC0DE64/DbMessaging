@@ -4,6 +4,8 @@
 #include <QDateTime>
 #include <QTimerEvent>
 
+#include <stdexcept>
+
 #include "client.h"
 
 Server::Server(QObject *parent) :
@@ -11,7 +13,7 @@ Server::Server(QObject *parent) :
     m_server(new QTcpServer(this))
 {
     if(!m_server->listen(QHostAddress::Any, 1234))
-        qFatal("could not start listening %s", m_server->errorString());
+        throw std::runtime_error(QStringLiteral("could not start listening %0").arg(m_server->errorString()).toStdString());
 
     connect(m_server, &QTcpServer::newConnection, this, &Server::newConnection);
 
