@@ -23,7 +23,7 @@ Server::Server(QObject *parent) :
 void Server::timerEvent(QTimerEvent *event)
 {
     if(event->timerId() == m_timerId)
-        Q_EMIT distribute(QDateTime::currentDateTime().toString("dd.MM.yyyy HH:mm:ss\r\n").toUtf8());
+        Q_EMIT distribute(QDateTime::currentDateTime().toString(QStringLiteral("dd.MM.yyyy HH:mm:ss\r\n")).toUtf8());
     else
         QObject::timerEvent(event);
 }
