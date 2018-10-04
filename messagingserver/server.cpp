@@ -38,7 +38,7 @@ void Server::newConnection()
     }
 
     auto client = new Client(socket, this);
-    connect(this, &Server::distribute, client, qOverload<const QByteArray &>(&Client::write));
+    connect(this, &Server::distribute, client, QOverload<const QByteArray &>::of(&Client::write));
     m_clients.insert(client);
     connect(client, &QObject::destroyed, this, [this, client](){
         m_clients.remove(client);
