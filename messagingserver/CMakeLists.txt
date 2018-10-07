@@ -1,5 +1,3 @@
-project(messagingserver)
-
 set(HEADERS
     client.h
     server.h

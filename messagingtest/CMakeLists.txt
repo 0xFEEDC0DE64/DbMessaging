@@ -1,4 +1,3 @@
-project(messagingtest)
 enable_testing()
 
 set(HEADERS

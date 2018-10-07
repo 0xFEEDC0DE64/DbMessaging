@@ -1,5 +1,3 @@
-project(messaginglib)
-
 set(HEADERS
     dbmsgbase.h
     dbmsgfieldbase.h
@@ -15,7 +13,7 @@ set(SOURCES
     messages/mymessage.cpp
 )
 
-add_library(messaginglib ${HEADERS} ${SOURCES})
+add_library(messaginglib SHARED ${HEADERS} ${SOURCES})
 
 target_compile_definitions(messaginglib PRIVATE MESSAGINGLIB_LIBRARY)
 
