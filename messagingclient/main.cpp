@@ -1,4 +1,7 @@
 #include <QCoreApplication>
+#include <QDate>
+#include <QDateTime>
+#include <QVariantMap>
 #include <QDebug>
 
 #include "messages/mymessage.h"
