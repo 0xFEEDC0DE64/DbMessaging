@@ -12,3 +12,5 @@ set(SOURCES
 add_executable(messagingserver ${HEADERS} ${SOURCES})
 
 target_link_libraries(messagingserver Qt5::Core Qt5::Network messaginglib)
+
+add_dependencies(messaging messagingserver)

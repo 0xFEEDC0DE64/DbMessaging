@@ -1,3 +1,5 @@
+enable_testing()
+
 set(HEADERS
     dbmsgbase.h
     dbmsgfieldbase.h
@@ -20,3 +22,10 @@ target_compile_definitions(messaginglib PRIVATE MESSAGINGLIB_LIBRARY)
 target_link_libraries(messaginglib Qt5::Core Qt5::Network)
 
 target_include_directories(messaginglib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+add_dependencies(messaging messaginglib)
+
+
+add_executable(messagingtest tst_messagingtest.cpp)
+add_test(messagingtest messagingtest)
+target_link_libraries(messagingtest Qt5::Core Qt5::Test messaginglib)
