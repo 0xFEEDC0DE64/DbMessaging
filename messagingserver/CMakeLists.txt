@@ -1,3 +1,6 @@
+find_package(Qt5Core CONFIG REQUIRED)
+find_package(Qt5Network CONFIG REQUIRED)
+
 set(HEADERS
     client.h
     server.h
