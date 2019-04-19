@@ -32,4 +32,4 @@ add_dependencies(messaging messaginglib)
 
 add_executable(messagingtest tst_messagingtest.cpp)
 add_test(messagingtest messagingtest)
-target_link_libraries(messagingtest Qt5::Core Qt5::Test messaginglib)
+target_link_libraries(messagingtest stdc++ Qt5::Core Qt5::Test messaginglib)
